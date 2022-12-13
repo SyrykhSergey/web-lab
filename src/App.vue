@@ -1,13 +1,30 @@
 <template>
- <div><h1>hello world?</h1></div>
+ <div class="app">
+   <header-menu></header-menu>
+
+ </div>
+
 </template>
 
 <script>
+import HeaderMenu from "@/Components/header-menu.vue";
+
 export default {
-  name: "App"
+  name: "App",
+  components: {HeaderMenu}
 }
 </script>
 
 <style>
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.app{
+
+}
+
+
 
 </style>
