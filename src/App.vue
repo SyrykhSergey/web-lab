@@ -1,7 +1,7 @@
 <template>
  <div class="app">
    <header-menu></header-menu>
-   <catalog :posts="posts.dishes"></catalog>
+   <catalog :posts="getData.dishes"></catalog><!-- Перенести в компонент catalog-item  -->
  </div>
 
 </template>
@@ -19,19 +19,13 @@ export default {
       posts:[]
     }
   },
-  methods:{
-    async fetchPosts(){
-      try {
-        const response = await axios.get('https://food-delivery.kreosoft.ru/api/dish?categories=Wok&vegetarian=false&sorting=NameAsc&page=1');
-        this.posts = response.data;
-      } catch (e) {
-        alert('Error')
-      }
-      
+  computed:{
+    getData(){
+      return this.$store.getters.catalogPage
     }
   },
-  mounted() {
-    this.fetchPosts();
+  async mounted() {
+    this.$store.dispatch('fetchCatalog')
   }
 }
 </script>

@@ -1,6 +1,8 @@
 <template>
 <div class="catalog">
+  <div class="sortingBar"> <!-- Загадка от жака фреско, нужно ли создавать компонент под сортировку если она используется 1 раз?-->
 
+  </div>
   <catalog-item
     v-for="postItem in posts"
     :post="postItem"
