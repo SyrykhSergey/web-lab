@@ -1,9 +1,7 @@
 <template>
  <div class="app">
-   <header-menu></header-menu>
-   <catalog :posts="getData.dishes"></catalog><!-- Перенести в компонент catalog-item  -->
+    <router-view></router-view>
  </div>
-
 </template>
 
 <script>
@@ -12,21 +10,7 @@ import Catalog from "@/Components/catalog.vue";
 import axios from "axios";
 
 export default {
-  name: "App",
-  components: {Catalog, HeaderMenu},
-  data(){
-    return{
-      posts:[]
-    }
-  },
-  computed:{
-    getData(){
-      return this.$store.getters.catalogPage
-    }
-  },
-  async mounted() {
-    this.$store.dispatch('fetchCatalog')
-  }
+  name: "App"
 }
 </script>
 

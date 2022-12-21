@@ -84,8 +84,9 @@ export default {
   flex-direction: row;
 }
 .buying{
-  float: bottom;
   background: #a3a2a2;
+
+
 }
 .buyPlace{
 
