@@ -2,16 +2,16 @@ import {createStore} from "vuex";
 import axios from "axios";
 
 export default createStore({
-    state:{
+    state: {
         catalog: []
     },
-    getters:{
-        catalogPage(state){
+    getters: {
+        catalogPage(state) {
             return state.catalog;
         }
     },
-    actions:{
-        async fetchCatalog(ctx){
+    actions: {
+        async fetchCatalog(ctx) {
             try {
                 const response = await axios.get('https://food-delivery.kreosoft.ru/api/dish?categories=Wok&vegetarian=false&sorting=NameAsc&page=1');
                 const catalogData = response.data;
@@ -21,10 +21,20 @@ export default createStore({
             }
 
 
+        },
+
+        async fetchCart(ctx) {
+            try {
+                const response = await axios.get('https://food-delivery.kreosoft.ru/api/basket')
+                const cartData = response.data;
+                //...
+            } catch (e) {
+                alert('Error')
+            }
         }
     },
-    mutations:{
-        updateCatalogPage(state, catalog){
+    mutations: {
+        updateCatalogPage(state, catalog) {
             state.catalog = catalog
         }
 

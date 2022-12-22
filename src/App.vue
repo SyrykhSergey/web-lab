@@ -1,7 +1,7 @@
 <template>
- <div class="app">
+  <div class="app">
     <router-view></router-view>
- </div>
+  </div>
 </template>
 
 <script>
@@ -16,15 +16,15 @@ export default {
 
 <style>
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.app{
+
+.app {
 
 
 }
-
 
 
 </style>

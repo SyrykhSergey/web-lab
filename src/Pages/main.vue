@@ -1,13 +1,6 @@
 <template>
   <div>
     <header-menu></header-menu>
-    <div class="sortingBar"> <!-- Загадка от жака фреско, нужно ли создавать компонент под сортировку если она используется 1 раз?-->
-      <select>
-        <option>Мясоо</option>
-        <option>Веганское мясооо</option>
-        <option>Не веганское мясооо</option>
-      </select>
-    </div>
     <catalog :posts="getData.dishes"></catalog><!-- Перенести в компонент catalog-item  -->
   </div>
 
@@ -21,13 +14,13 @@ import axios from "axios";
 export default {
   name: "main",
   components: {Catalog, HeaderMenu},
-  data(){
-    return{
-      posts:[]
+  data() {
+    return {
+      posts: []
     }
   },
-  computed:{
-    getData(){
+  computed: {
+    getData() {
       return this.$store.getters.catalogPage
     }
   },
@@ -38,8 +31,6 @@ export default {
 </script>
 
 <style>
-
-
 
 
 </style>

@@ -9,8 +9,8 @@
 export default {
   name: "ratings",
 
-  props:{
-    star:{
+  props: {
+    star: {
       type: Number,
       required: true
     }
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.ratings{
+.ratings {
   display: flex;
   flex-wrap: nowrap;
   color: gold;

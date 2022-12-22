@@ -6,15 +6,15 @@
     </div>
     <div class="menu">
       <ul class="itemMenu">
-        <li><a href="#">Меню</a></li>
-        <li><a href="#">Заказы</a></li>
-        <li><a href="#">Корзина</a></li>
+        <li><a href="/">Меню</a></li>
+        <li><a href="/orders">Заказы</a></li>
+        <li><a href="/purchase">Корзина</a></li>
         <!-- После появления глобальных переменных, необходимо добавить v-if для авторизированных\не.. -->
       </ul>
       <ul class="authorizationMenu">
 
         <li><a href="#">Авторизация</a></li>
-        <li><a href="#">Регистрация</a></li>
+        <li><a href="/registration">Регистрация</a></li>
       </ul>
     </div>
   </header>
@@ -27,16 +27,18 @@ export default {
 </script>
 
 <style scoped>
-.header{
+.header {
   width: 100%;
   position: relative;
   padding-bottom: 8px;
   border-bottom: 1px solid black;
 }
-.Logo{
+
+.Logo {
   margin-left: 10px;
 }
-.Logo, .menu{
+
+.Logo, .menu {
   font-size: 17px;
   font-family: Arial;
   margin-top: 5px;
@@ -44,22 +46,25 @@ export default {
   white-space: nowrap;
 }
 
-.menu li{
+.menu li {
   margin-left: 25px;
   display: inline-block;
 
 }
-.authorizationMenu{
+
+.authorizationMenu {
   position: absolute;
   right: 15px;
   top: 10px;
   font-size: 15px;
 }
-.menu a{
+
+.menu a {
   text-decoration: none;
   color: black;
 }
-.menu a:hover{
+
+.menu a:hover {
   color: seagreen;
 }
 
